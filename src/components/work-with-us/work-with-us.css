@@ -1,0 +1,134 @@
+.workWithUs {
+  display: flex;
+  height: 800px;
+  margin: 0 auto;
+  padding-top: 200px;
+  position: relative;
+}
+
+.workWithUs-titles__wrapper {
+  display: flex;
+  justify-content: center;
+  width: 873px;
+}
+
+.workWithUs-title {
+  display: block;
+  width: 537px;
+  height: 100%;
+
+  font-family: Nohemi;
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 48px;
+  letter-spacing: 0%;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.workWithUs-title__span {
+  color: var(--primary-red);
+}
+
+.workWithUs-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10;
+
+  width: 315px;
+  height: 159px;
+  margin-top: auto;
+  /* margin-left: 102px; */
+  margin-left: auto;
+  padding: 0;
+
+  background-color: inherit;
+  border: 3px solid var(--primary-white);
+
+  color: var(--primary-white);
+  font-family: Nohemi;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 93%;
+  letter-spacing: 0%;
+  text-align: left;
+  text-transform: uppercase;
+  transition: 300ms;
+}
+
+.workWithUs-btn:visited {
+  color: inherit;
+}
+
+.workWithUs-btn:hover,
+.workWithUs-btn:focus {
+  background-color: var(--primary-red);
+  color: var(--typography-white);
+  border-color: var(--primary-red);
+}
+
+.workWithUs-btn:hover svg,
+.workWithUs-btn:focus svg {
+  fill: var(--typography-white);
+}
+
+.workWithUs-icon {
+  display: block;
+  width: 29px;
+  height: 29px;
+  margin-left: 10px;
+  fill: var(--primary-white);
+  transition: 150ms;
+}
+
+@media screen and (max-width: 1439px) {
+  .workWithUs {
+    flex-direction: column;
+  }
+
+  .workWithUs-titles__wrapper {
+    justify-content: start;
+    width: 100%;
+    margin-top: 20px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .workWithUs-btn {
+    width: 100%;
+    height: 109px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .work-with-us-shape5 {
+    position: absolute;
+    top: 40%;
+    left: 30%;
+    z-index: -1;
+    width: 300px;
+    height: 300px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .work-with-us-shape5 {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    z-index: -1;
+    width: 250px;
+    height: 250px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .work-with-us-shape5 {
+    position: absolute;
+    top: 40%;
+    left: 30%;
+    z-index: -1;
+    width: 300px;
+    height: 300px;
+  }
+}

@@ -1,0 +1,133 @@
+.home {
+  padding-top: 170px;
+  padding-bottom: 30px;
+  min-height: 100vh;
+  position: relative;
+  background-image: url('../../assets/backgrounds/main-bg.webp');
+  background-size: cover;
+}
+
+.home-bg {
+  position: absolute;
+}
+
+.home_cta {
+  max-width: 810px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 60px;
+}
+
+.home_cta-text {
+  display: block;
+  height: 132px;
+  color: var(--typography-white);
+  font-family: Nohemi;
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 33.48px;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.home_cta-button {
+  display: block;
+  text-align: center;
+  cursor: pointer;
+  background-color: inherit;
+  margin-top: 85px;
+  padding: 30px 30px;
+  color: var(--typography-white);
+  border-color: var(--typography-white);
+  border: 2px solid rgb(244, 245, 240);
+  text-transform: uppercase;
+  font-family: Nohemi;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 93%;
+  transition: 300ms;
+}
+
+.home_cta-button:hover,
+.home_cta-button:focus {
+  background-color: var(--primary-red);
+  border-color: var(--primary-red);
+}
+
+.home_middle-block {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  grid-template-areas:
+    'text1'
+    'text2'
+    'image';
+  gap: 20px;
+}
+
+.home_middle-block-image {
+  grid-area: image;
+  width: 100%;
+}
+
+.home_middle-block-text1 {
+  grid-area: text1;
+  max-width: 315px;
+  line-height: 21.6px;
+  font-size: 18px;
+}
+
+.text2 {
+  grid-area: text2;
+  display: flex;
+  justify-content: space-between;
+}
+
+.home_middle-block-text2 {
+  max-width: 315px;
+  line-height: 21.6px;
+  font-size: 18px;
+}
+
+.home_middle-block-arrow {
+  width: 38px;
+  height: 70px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1439px) {
+  .home_middle-block-text1 {
+    grid-area: text1;
+    max-width: 100%;
+    line-height: 21.6px;
+    font-size: 18px;
+  }
+
+  .home_cta-button {
+    margin-top: -40px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .home_middle-block {
+    grid-template-areas:
+      'image text1'
+      'image text2';
+    align-items: stretch;
+    grid-column-gap: 125px;
+  }
+  .text2 {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .home_middle-block-text1,
+  .home_middle-block-text2 {
+    max-width: 364px;
+  }
+  .home_middle-block-text1 {
+    padding-top: 100px;
+  }
+  .home_cta-button {
+    margin-top: -40px;
+    padding: 40px 40px;
+  }
+}

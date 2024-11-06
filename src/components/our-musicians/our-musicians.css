@@ -1,0 +1,335 @@
+.our-musicians {
+  position: relative;
+  padding-top: 140px;
+  overflow: hidden;
+  margin-top: 80px;
+}
+
+.relative {
+  position: relative;
+}
+
+.our-musicians-spacing {
+  margin-top: 30px;
+  display: flex;
+  gap: 110px;
+  min-height: 700px;
+}
+
+@media screen and (max-width: 767px) {
+  .our-musicians-spacing {
+    margin-top: 30px;
+    display: flex;
+    gap: 30px;
+    min-height: 700px;
+  }
+
+  .our-musicians_card {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .our-musicians_card {
+    display: flex;
+    gap: 25px;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+  }
+}
+
+.fade-out {
+  opacity: 0;
+}
+
+.fade-in {
+  opacity: 1;
+}
+
+.our-musicians_card-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  filter: saturate(0) opacity(0.2);
+  z-index: -1;
+}
+
+@media screen and (max-width: 767px) {
+  .our-musicians_card-image {
+    object-fit: cover;
+    max-width: 100%;
+    height: 546px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .our-musicians_card-image {
+    object-fit: cover;
+    width: 315px;
+    height: 324px;
+  }
+}
+
+@media screen and (max-width: 1439px) {
+  .our-musicians_card-container .navigation-label {
+    position: absolute;
+    bottom: 40px;
+  }
+  .our-musicians-shape3 {
+    mix-blend-mode: hard-light;
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    left: -12%;
+    top: 20%;
+    pointer-events: none;
+    z-index: -1;
+  }
+
+  .our-musicians-shape4 {
+    mix-blend-mode: hard-light;
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    right: 4%;
+    bottom: 0%;
+    pointer-events: none;
+    z-index: -1;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .our-musicians-shape3 {
+    display: none;
+  }
+
+  .our-musicians-shape4 {
+    mix-blend-mode: hard-light;
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    right: 4%;
+    bottom: 0%;
+    pointer-events: none;
+    z-index: -1;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .our-musicians_card-container {
+    position: relative;
+  }
+
+  .our-musicians_card-container .navigation-label {
+    position: absolute;
+    bottom: 30px;
+  }
+  .our-musicians-shape3 {
+    mix-blend-mode: hard-light;
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    left: -4%;
+    top: -25%;
+    pointer-events: none;
+    z-index: -1;
+  }
+
+  .our-musicians-shape4 {
+    mix-blend-mode: hard-light;
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    right: 4%;
+    bottom: 0%;
+    pointer-events: none;
+    z-index: -1;
+  }
+}
+
+.our-musicians_card-info {
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.our-musicians_card-info_name {
+  color: var(--primary-red);
+  font-family: Nohemi;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 14px;
+  text-transform: uppercase;
+}
+
+.our-musicians_card-info_date {
+  color: var(--typography-white);
+  font-family: Nohemi;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 14px;
+  text-transform: uppercase;
+}
+
+.our-musicians_card-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+  padding: 20px 30px;
+  border: 2px solid var(--typography-white);
+  color: var(--typography-white);
+  fill: var(--typography-white);
+  transition: 300ms;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.our-musicians_card-button:visited {
+  color: inherit;
+}
+
+.our-musicians_card-button:hover {
+  border-color: var(--primary-red);
+  color: var(--typography-white);
+  background-color: var(--primary-red);
+  fill: var(--typography-white);
+}
+
+.our-musicians_card-button-svg {
+  margin-left: 10px;
+  width: 30px;
+  height: 30px;
+}
+
+.our-musicians_card-text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.our-musicians_card-text {
+  color: var(--typography-white);
+  font-family: Nohemi;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 100.52%;
+  text-align: left;
+}
+
+@media screen and (max-width: 767px) {
+  .our-musicians_names {
+    display: flex;
+    gap: 25px;
+    overflow-x: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .our-musicians_names::-webkit-scrollbar {
+    display: none;
+  }
+  .our-musicians_name:nth-child(1) {
+    min-width: 275px;
+  }
+  .our-musicians_name:nth-child(2) {
+    min-width: 140px;
+  }
+  .our-musicians_name:nth-child(3) {
+    min-width: 270px;
+  }
+  .our-musicians_name:nth-child(4) {
+    min-width: 262px;
+  }
+  .our-musicians_name:hover,
+  .our-musicians_name:focus {
+    color: var(--primary-red);
+  }
+  .our-musicians_name.active {
+    color: var(--primary-red);
+  }
+  .our-musicians_card-container .navigation-label {
+    position: absolute;
+    bottom: -190px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1439px) {
+  .our-musicians_names {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .our-musicians_name:hover,
+  .our-musicians_name:focus {
+    color: var(--primary-red);
+  }
+  .our-musicians_name.active {
+    color: var(--primary-red);
+    transform: translateX(20px);
+  }
+  .our-musicians_card-container .navigation-label {
+    position: absolute;
+    bottom: -190px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .our-musicians_names {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+  .our-musicians_name:hover,
+  .our-musicians_name:focus {
+    color: var(--primary-red);
+  }
+  .our-musicians_name.active {
+    color: var(--primary-red);
+    transform: translateX(20px);
+  }
+}
+
+.our-musicians_name {
+  display: block;
+  color: var(--typography-white);
+  font-family: Nohemi;
+  font-size: 62px;
+  font-weight: 600;
+  line-height: 62px;
+  text-transform: uppercase;
+  transition: transform 0.3s ease;
+}
+
+@media screen and (max-width: 1439px) {
+  .our-musicians {
+    padding-top: 80px;
+    padding-bottom: 200px;
+  }
+
+  .our-musicians-spacing {
+    gap: 25px;
+    flex-direction: column-reverse;
+  }
+
+  .our-musicians_name {
+    font-size: 32px;
+    line-height: 32px;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .our-musicians_card-image {
+    object-fit: cover;
+    max-width: 100%;
+    height: 346px;
+  }
+}
