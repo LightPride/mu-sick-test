@@ -142,6 +142,7 @@ button {
 
 ::-webkit-scrollbar-track {
   background: inherit;
+  height: 5px !important;
 }
 
 ::-webkit-scrollbar-thumb {
