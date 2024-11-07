@@ -297,37 +297,77 @@ body.not-mac-user .autoBlur2 {
     filter: blur(0px) drop-shadow(-70px -70px crimson);
   }
 } */
-.scrollable-container {
+/* .scrollable-container {
   position: relative;
   width: 300px;
   height: 400px;
-  overflow: hidden; /* Сховаємо рідний скролбар */
+  overflow: hidden; 
   border: 1px solid #ddd;
 }
 
-/* Вміст, що скролиться */
+
 .content {
   position: absolute;
   top: 0;
   left: 0;
-  right: -17px; /* Додаємо трохи місця для скролбару */
+  right: -17px; 
   bottom: 0;
-  overflow-y: scroll; /* Дозволяє скролінг вмісту */
-  padding-right: 20px; /* Додаємо відступ для тексту від скролбару */
+  overflow-y: scroll; 
+  padding-right: 20px;
 }
 
-/* Кастомний скролбар */
+
 .custom-scrollbar {
   position: absolute;
   top: 0;
   right: 0;
   width: 5px;
   height: 100%;
-  background: rgba(0, 0, 0, 0.1); /* Стилізація фону скролбару */
+  background: rgba(0, 0, 0, 0.1);
 }
 
-/* Смуга прокрутки */
+
 .scroll-thumb {
+  position: relative;
+  width: 100%;
+  background: rgb(198, 81, 15);
+  border-radius: 10px;
+  cursor: pointer;
+} */
+
+.asdf {
+  font-size: 30px;
+}
+
+.scrollable-container {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  overflow: hidden;
+  border: 1px solid #ddd;
+}
+
+.content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: -17px;
+  bottom: -17px;
+  overflow: scroll;
+  padding-right: 20px;
+  padding-bottom: 20px;
+}
+
+.custom-scrollbar-vertical {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 5px;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.scroll-thumb-vertical {
   position: relative;
   width: 100%;
   background: rgb(198, 81, 15);
@@ -335,6 +375,19 @@ body.not-mac-user .autoBlur2 {
   cursor: pointer;
 }
 
-.asdf {
-  font-size: 30px;
+.custom-scrollbar-horizontal {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 5px;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.scroll-thumb-horizontal {
+  position: relative;
+  height: 100%;
+  background: rgb(198, 81, 15);
+  border-radius: 10px;
+  cursor: pointer;
 }
