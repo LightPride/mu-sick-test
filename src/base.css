@@ -136,14 +136,14 @@ button {
 }
 
 ::-webkit-scrollbar {
-   -webkit-appearance: none;
+  -webkit-appearance: none;
   width: 5px;
   height: 130px;
 }
 
 ::-webkit-scrollbar-track {
   background: inherit;
-  height: 5px !important;
+  /* height: 5px !important; */
 }
 
 ::-webkit-scrollbar-thumb {
@@ -297,3 +297,44 @@ body.not-mac-user .autoBlur2 {
     filter: blur(0px) drop-shadow(-70px -70px crimson);
   }
 } */
+.scrollable-container {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  overflow: hidden; /* Сховаємо рідний скролбар */
+  border: 1px solid #ddd;
+}
+
+/* Вміст, що скролиться */
+.content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: -17px; /* Додаємо трохи місця для скролбару */
+  bottom: 0;
+  overflow-y: scroll; /* Дозволяє скролінг вмісту */
+  padding-right: 20px; /* Додаємо відступ для тексту від скролбару */
+}
+
+/* Кастомний скролбар */
+.custom-scrollbar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 5px;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.1); /* Стилізація фону скролбару */
+}
+
+/* Смуга прокрутки */
+.scroll-thumb {
+  position: relative;
+  width: 100%;
+  background: rgb(198, 81, 15);
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.asdf {
+  font-size: 30px;
+}
