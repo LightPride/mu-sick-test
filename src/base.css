@@ -143,7 +143,7 @@ button {
 
 ::-webkit-scrollbar-track {
   background: inherit;
-  /* height: 5px !important; */
+  height: 5px !important;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -343,7 +343,7 @@ body.not-mac-user .autoBlur2 {
   position: relative;
   width: 300px;
   height: 400px;
-  overflow: hidden;
+  overflow: scroll;
   border: 1px solid #ddd;
 }
 
@@ -390,4 +390,43 @@ body.not-mac-user .autoBlur2 {
   background: rgb(198, 81, 15);
   border-radius: 10px;
   cursor: pointer;
+}
+
+.force-show-scrollbars ::-webkit-scrollbar-track:vertical {
+  border-left: 1px solid #e7e7e7;
+  box-shadow:
+    1px 0 1px 0 #f6f6f6 inset,
+    -1px 0 1px 0 #f6f6f6 inset;
+}
+
+.force-show-scrollbars ::-webkit-scrollbar-track:horizontal {
+  border-top: 1px solid #e7e7e7;
+  box-shadow:
+    0 1px 1px 0 #f6f6f6 inset,
+    0 -1px 1px 0 #f6f6f6 inset;
+}
+
+.force-show-scrollbars ::-webkit-scrollbar {
+  -webkit-appearance: none;
+  background-color: #fafafa;
+  width: 16px;
+}
+
+.force-show-scrollbars ::-webkit-scrollbar-thumb {
+  background-clip: padding-box;
+  background-color: #c1c1c1;
+  border-color: transparent;
+  border-radius: 9px 8px 8px 9px;
+  border-style: solid;
+  border-width: 3px 3px 3px 4px; /* Workaround because margins aren't supported */
+  box-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
+}
+
+/* Unfortunately scrollbars can't use CSS transitions. Also, it's not possible
+   to highlight the thumb when the scrollbar track is hovered without some
+   JavaScript acrobatics; https://jsfiddle.net/QcqBM/6/ is a start, but you
+   also have to check whether the element has a scrollbar and if so how wide
+   it is. */
+.force-show-scrollbars ::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(0, 0, 0, 0.5);
 }

@@ -12,7 +12,6 @@ import { useEffect, useState } from 'react';
 import { Loader } from './components/loader';
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer } from 'react-toastify';
-import CustomScrollbar from '../customs';
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -52,7 +51,7 @@ function App() {
         <News />
         <OurTeam />
         <ToastContainer theme="dark" closeOnClick />
-        <CustomScrollbar>
+        <div className="scrollable-container force-show-scrollbars">
           <p className="asdf">
             ASDFGASDFGASDFGASDFGASDFGASDFGASDFGASDFGASDFG ASDFGASDFGASDFG
             ASDFGASDFGASDFG ASDFGASDFGASDFG ASDFGASDFGASDFG ASDFGASDFGASDFG
@@ -66,7 +65,7 @@ function App() {
             ASDFGASDFGASDFG ASDFGASDFGASDFG ASDFGASDFGASDFG ASDFGASDFGASDFG
             ASDFGASDFGASDFG ASDFGASDFGASDFG ASDFGASDFGASDFG ASDFGASDFGASDFG
           </p>
-        </CustomScrollbar>
+        </div>
       </main>
       <Footer />
     </>
